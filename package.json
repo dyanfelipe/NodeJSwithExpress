@@ -6,12 +6,14 @@
   "author": "dyanfelipe <dyansilva@outlook.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/server.js"
+    "dev": "nodemon src/server.js",
+    "dev:debug": "nodemon --inspect src/server.js"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "sucrase": "^3.12.1"
   }
 }
