@@ -53,3 +53,44 @@ yarn add sucrase
 ```javascript
 "restart": true,
 ```
+
+# Eslint
+
+add eslint as development dependency
+
+```javascript
+yarn add eslint -D
+```
+
+start the eslint
+
+```javascript
+yarn eslint --init
+```
+
+select the desired option. I selected the following options
+
+```javascript
+- To check syntax, find problems, and enforce code style
+- JavaScript modules (import/export)
+- None of these
+- You want to use TypeScript = No
+- Select Nodejs
+- Use populate style guide
+- Select AirBnB
+- Select JavaScript
+```
+
+I like to use the wire. However it already boots with **npm** just delete the generated file "packege-lock.json" and run **yarn**
+
+Install Prettier
+
+```javascript
+yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
+```
+
+change all files without needing to save it
+
+```javascript
+yarn eslint --fix nameFolder --ext extensão
+```
