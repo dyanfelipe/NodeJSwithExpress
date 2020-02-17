@@ -94,3 +94,47 @@ change all files without needing to save it
 ```javascript
 yarn eslint --fix nameFolder --ext extensão
 ```
+
+# Sequelize
+
+install sequelize
+
+```javascript
+yarn add sequelize
+```
+
+install sequelize-cli and command line interface
+
+```javascript
+yarn add sequelize-cli -D
+```
+
+https://sequelize.org/v5/manual/dialects.html#postgresql
+
+```javascript
+yarn add pg pg-hstore
+```
+
+Create migrations
+
+```shell script
+yarn sequelize migration:create --name=create=users
+```
+
+after creating the migrations and making the changes run the following commandafter
+
+```shell script
+yarn sequelize db:migrate
+```
+
+undo a migration change
+
+```
+yarn sequelize db:migrate:undo
+```
+
+or all
+
+```shell script
+yarn sequelize db:migrate:undo:all
+```
