@@ -138,3 +138,8 @@ or all
 ```shell script
 yarn sequelize db:migrate:undo:all
 ```
+generate a hash in the password register
+
+```
+ yarn add bcryptjs
+```
