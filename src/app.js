@@ -1,7 +1,10 @@
+import dotenv from 'dotenv';
 import express from 'express';
 import routes from './routes';
-import dotenv from 'dotenv';
+import './database';
+
 dotenv.config();
+
 class App {
   constructor() {
     this.server = express();
