@@ -3,17 +3,17 @@
 ### Mastering Nodejs
 
 <p>
-Estrutura para facilitar em Teste Unitários, Funcional, Integração. Não e necessário iniciar os teste utilizando a porta 3100 realizer os teste no <strong>app.js</strong> utilizando o server.</p>
+Structure to facilitate Unit Testing, Functional Testing, Integration. It is not necessary to start the tests using port 3100 to perform the tests in <strong> app.js </strong> using the server.</p>
 
 ### Using simtax ES7
 
-<p>Usando ES6 JavaScript.</p>
+<p>Using ES6 JavaScript.</p>
 
 ```
 yarn add sucrase
 ```
 
-<p>Crie um arquivo novo arquivo <strong>nodemon.js</strong> Em seguida registre o sucrase da seguinte forma. Estamos falando que todo arquivo com extensão <strong>JS</strong> vai rodar com node e fazer um registro no sucrase.</p>
+<p>Create a new file <strong> nodemon.js </strong> Then register the sucrase as follows. We are saying that every file with extension <strong> JS </strong> will run with node and make a record in sucrase.</p>
 
 ```javascript
 {
@@ -24,7 +24,7 @@ yarn add sucrase
 
 ```
 
-<p>Para fazer debug é necessário fazer algumas alterações.</p>
+<p>To debug it is necessary to make some changes.</p>
 <strong>package.json</strong>.
 
 ```javascript
@@ -34,8 +34,8 @@ yarn add sucrase
   },
 ```
 
-<p>Se estiver usando o vscode use a seguinte configuração.</p>
-<p><strong>launch.json</strong> Só lembre que o arquivo pode ser acessado pelo debug do vscode.</p>
+<p>If using vscode use the following configuration.</p>
+<p><strong>launch.json</strong> Just remember that the file can be accessed by vscode debugging.</p>
 
 ```javascript
   "configurations": [
@@ -48,7 +48,7 @@ yarn add sucrase
   ]
 ```
 
-<p>Para o debug reiniciar toda vez com alguma alteração e só passa a seguinte propriedade.</p>
+<p>For debug, restart every time with some change and only pass the following property.</p>
 
 ```javascript
 "restart": true,
