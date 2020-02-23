@@ -154,3 +154,11 @@ To generate a JWT token authentication add the following instance
 ```
 yarn add jsonwebtoken
 ```
+
+library to validate (schema validation)
+
+***Yup is a JavaScript schema builder for value parsing and validation***
+
+```
+yarn add yup
+```
