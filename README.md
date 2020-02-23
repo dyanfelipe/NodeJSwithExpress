@@ -54,6 +54,10 @@ yarn add sucrase
 "restart": true,
 ```
 
+after changes in debugging, run the command
+```
+yarn dev:debug
+```
 # Eslint
 
 add eslint as development dependency
@@ -138,8 +142,15 @@ or all
 ```shell script
 yarn sequelize db:migrate:undo:all
 ```
+
 generate a hash in the password register
 
 ```
  yarn add bcryptjs
+```
+
+To generate a JWT token authentication add the following instance
+
+```
+yarn add jsonwebtoken
 ```

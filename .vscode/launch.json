@@ -7,8 +7,8 @@
     {
       "type": "node",
       "request": "attach",
-      "name": "Launch Program",
       "restart": true,
+      "name": "Launch Program",
       "protocol": "inspector"
     }
   ]
