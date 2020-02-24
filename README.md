@@ -62,8 +62,7 @@ yarn dev:debug
 
 add eslint as development dependency
 
-```javascript
-yarn add eslint -D
+```javascript# Eslint
 ```
 
 start the eslint
@@ -161,4 +160,9 @@ library to validate (schema validation)
 
 ```
 yarn add yup
+```
+# Upload file
+let's go use  format multipart/form-data to upload in files
+```
+yarn add multer
 ```

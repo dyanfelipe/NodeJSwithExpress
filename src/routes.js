@@ -1,21 +1,22 @@
 import { Router } from 'express';
+import multer from 'multer'
+import multerConfig from './config/multer'
 
 import UserController from './app/controllers/UserControllers';
 import SessionControllers from './app/controllers/SessionControllers';
 
-import authMiddleware from './app/middleware/auth'
+import authMiddleware from './app/middleware/auth';
 
 const routes = new Router();
+const upload = multer(multerConfig)
 
 routes.post('/users', UserController.store);
 routes.post('/session', SessionControllers.store);
 // routas que precesam de auth
-routes.use(authMiddleware)
+routes.use(authMiddleware);
 routes.put('/users', UserController.update);
-
-routes.get('/', (req, res) => {
-  console.log(process.env.DB_HOST);
-  return res.json({ msg: process.env.DB_HOST });
-});
+routes.post('/files', upload.single("thumbnail"), (req, res) => {
+  res.json({ ok: "Upload in file" })
+})
 
 export default routes;
