@@ -1,6 +1,6 @@
 import { Model, Sequelize } from 'sequelize';
 
-class File extends Model {
+class Appointment extends Model {
   static init(sequelize) {
     super.init(
       {
@@ -8,14 +8,16 @@ class File extends Model {
         cenceled_at: Sequelize.DATE,
       },
       {
-        sequelize
+        sequelize,
       }
-    )
+    );
+    return this;
   }
+
   static associate(models) {
-    this.belongsTo(models.User, { foreignKey: 'user_id', as: 'user' })
-    this.belongsTo(models.User, { foreignKey: 'provider_id', as: 'provider' })
+    this.belongsTo(models.User, { foreignKey: 'user_id', as: 'user' });
+    this.belongsTo(models.User, { foreignKey: 'provider_id', as: 'provider' });
   }
 }
 
-export default new File()
+export default Appointment;

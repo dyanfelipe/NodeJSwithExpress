@@ -7,9 +7,9 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true,
       },
-      data: {
+      date: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       user_id: {
         type: Sequelize.INTEGER,
@@ -27,7 +27,6 @@ module.exports = {
       },
       canceled_at: {
         type: Sequelize.DATE,
-        allowNull: false
       },
       created_at: {
         type: Sequelize.DATE,
