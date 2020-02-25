@@ -23,7 +23,7 @@ class ScheduleController {
           [Op.between]: [startOfDay(parsedDate), endOfDay(parsedDate)],
         },
       },
-      onder: ['date']
+      onder: ['date'],
     });
     res.json(appointment);
   }

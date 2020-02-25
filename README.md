@@ -161,12 +161,23 @@ library to validate (schema validation)
 ```
 yarn add yup
 ```
+
 # Upload file
 let's go use  format multipart/form-data to upload in files
+
 ```
 yarn add multer
 ```
+
 using library to deal with date
+
 ```
 yarn add date-fns@next
+```
+
+configing a second database. let's go use the bank mongodb.
+let's add a ORM for bank mongodb.
+
+```
+yarn add mongoose
 ```
