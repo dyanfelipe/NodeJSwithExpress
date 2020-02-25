@@ -21,7 +21,8 @@ class Database {
   }
 
   mongo() {
-    const host = `mongodb://${process.env.DBMONGO_USER}:${process.env.DBMONGO_PASSWORD}@${process.env.DBMONGO_HOST}/${process.env.DBMONGO_AMBIENTE}`;
+    // 'mongodb+srv://aircnc:aircnc@aircnc-o7vg9.mongodb.net/week10?retryWrites=true&w=majority'
+    const host = `mongodb+srv://${process.env.DBMONGO_USER}:${process.env.DBMONGO_PASSWORD}@${process.env.DBMONGO_HOST}/${process.env.DBMONGO_AMBIENTE}`;
     mongoose.connect(host, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
