@@ -187,3 +187,9 @@ send email to users
 ```
 yarn add nodemailer
 ```
+
+using template of email. Let's go use a library Handlebars
+
+```
+yarn add express-handlebars nodemailer-express-handlebars
+```
