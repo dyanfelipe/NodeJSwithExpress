@@ -181,3 +181,9 @@ let's add a ORM for bank mongodb.
 ```
 yarn add mongoose
 ```
+
+send email to users
+
+```
+yarn add nodemailer
+```
