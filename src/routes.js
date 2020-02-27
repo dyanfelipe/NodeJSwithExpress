@@ -9,6 +9,7 @@ import ProvidersController from './app/controllers/ProvidersControllers';
 import scheduleController from './app/controllers/scheduleControllers';
 import AppointmentController from './app/controllers/AppointmentControllers';
 import NotificationController from './app/controllers/NotificationControllers';
+import AvailableController from './app/controllers/AvailableControllers';
 import authMiddleware from './app/middleware/auth';
 
 const routes = new Router();
@@ -21,6 +22,7 @@ routes.post('/session', SessionController.store);
 routes.use(authMiddleware);
 routes.put('/users', UserController.update);
 routes.get('/providers', ProvidersController.index);
+routes.get('/providers/:providerId/available', AvailableController.index);
 routes.post('/files', upload.single('file'), FileController.store);
 routes.get('/appointments', AppointmentController.index);
 routes.delete('/appointments/:id', AppointmentController.destroy);
