@@ -199,3 +199,12 @@ controller of queue to send email
 ```
 yarn add bee-queue
 ```
+using sentry to view production error. "follow documentation"
+---
+returns error in function async
+```
+yarn add express-async-errors
+```
+```
+yarn add youch
+```
