@@ -193,3 +193,9 @@ using template of email. Let's go use a library Handlebars
 ```
 yarn add express-handlebars nodemailer-express-handlebars
 ```
+
+controller of queue to send email
+
+```
+yarn add bee-queue
+```
