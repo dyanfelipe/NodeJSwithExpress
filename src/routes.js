@@ -1,4 +1,6 @@
 import { Router } from 'express';
+import Brute from 'express-brute';
+import BruteRedis from 'express-brute-redis';
 import multer from 'multer';
 import multerConfig from './config/multer';
 
@@ -19,8 +21,20 @@ import validateSessionStore from './app/validations/SessionStore';
 const routes = new Router();
 const upload = multer(multerConfig);
 
+const bruteStore = new BruteRedis({
+  host: process.env.REDIS_HOST,
+  post: process.env.REDIS_PORT,
+});
+
+const bruteForce = new Brute(bruteStore);
+
 routes.post('/users', validateUserStore, UserController.store);
-routes.post('/session', validateSessionStore, SessionController.store);
+routes.post(
+  '/session',
+  bruteForce.prevent,
+  validateSessionStore,
+  SessionController.store
+);
 // rotas que precesam de auth
 
 routes.use(authMiddleware);
